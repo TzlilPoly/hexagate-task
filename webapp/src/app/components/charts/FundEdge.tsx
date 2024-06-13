@@ -1,5 +1,5 @@
 import React from 'react';
-import { EdgeProps, } from 'reactflow';
+import {BaseEdge, EdgeProps, getStraightPath,} from 'reactflow';
 
 export function FundEdge(
     {
@@ -7,10 +7,15 @@ export function FundEdge(
         sourceY,
         targetX,
         targetY,
-        sourcePosition,
-        targetPosition,
-
         markerEnd,
     }: EdgeProps) {
 
+    const [edgePath] = getStraightPath({
+        sourceX,
+        sourceY,
+        targetX,
+        targetY,
+    });
+
+    return <BaseEdge path={edgePath} markerEnd={markerEnd}/>;
 }

@@ -32,3 +32,35 @@ body {
   }
 }
 
+.fundNode {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  border: 1px #e5f1f9 solid;
+  background: #fdfdfe;
+  border-radius: 10px;
+  justify-content: start;
+  align-items: center;
+  padding: 5px;
+
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .text {
+      font-size: 12px;
+
+      &.bold {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.flowChartContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
